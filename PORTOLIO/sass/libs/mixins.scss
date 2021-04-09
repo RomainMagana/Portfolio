@@ -1,0 +1,195 @@
+@mixin burger__menu {
+
+    .burger:after,
+    .burger:before,
+    .burger div {
+
+        background-color: rgb(0, 0, 0);
+        border-radius: 3px;
+        content: '';
+        display: block;
+        height: 3.5px;
+        width: 25px;
+        margin: 4px 0;
+        transition: all .2s ease-in-out;
+
+        @include tablet {
+            width: 30px;
+        }
+    }
+
+    .burger__icon--active {
+        overflow-y: hidden;
+    }
+
+    .burger__icon--active:before {
+        transform: translateY(12px) rotate(135deg);
+    }
+
+    .burger__icon--active:after {
+        transform: translateY(-12px) rotate(-135deg);
+    }
+
+    .burger__icon--active div {
+        transform: scale(0);
+    }
+
+}
+
+
+@mixin title__annimation {
+    li {
+        &:last-child {
+            letter-spacing: 0;
+        }
+
+        &:nth-child(1) {
+            animation: Text-jump 1s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+        }
+
+        &:nth-child(2) {
+            animation: Text-jump 1s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+            animation-delay: 0.3s;
+        }
+
+        &:nth-child(3) {
+            animation: Text-jump 1s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+            animation-delay: 0.6s;
+        }
+
+        &:nth-child(4) {
+            animation: Text-jump 1s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+            animation-delay: 0.9s;
+        }
+
+        &:nth-child(5) {
+            animation: Text-jump 1s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+            animation-delay: 1.2s;
+        }
+
+        &:nth-child(6) {
+            animation: Text-jump 1s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+            animation-delay: 1.5s;
+        }
+
+        &:nth-child(7) {
+            animation: Text-jump 1s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+            animation-delay: 1.8s;
+        }
+
+        &:nth-child(8) {
+            animation: Text-jump 1s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+            animation-delay: 2.1s;
+        }
+
+        &:nth-child(9) {
+            animation: Text-jump 1s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+            animation-delay: 2.4s;
+        }
+
+        &:hover {
+            animation: Text-jump 1s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+        }
+    }
+}
+
+@mixin lampe-allumer {
+    .item__lampe:nth-child(1)::after {
+        animation: Lampe-light 1.5s;
+        animation-delay: 0s;
+    }
+
+    .item__lampe:nth-child(2)::after {
+        animation: Lampe-light 1.5s;
+        animation-delay: 0.5s;
+    }
+
+    .item__lampe:nth-child(3)::after {
+        animation: Lampe-light 1.5s;
+        animation-delay: 1s;
+    }
+}
+
+@mixin button-black {
+    &:hover {
+        background-color: rgb(255, 255, 255);
+        transition: 0.5s;
+
+        p {
+            color: rgb(0, 0, 0);
+            transition: 0.5s;
+        }
+    }
+}
+
+@mixin skill-bar {
+    .bar__skill {
+        h2 {
+            font-size: 1rem;
+            letter-spacing: 0px;
+            font-family: 'Poppins';
+            font-weight: bold;
+            padding-left: 3px;
+        }
+
+        div {
+            position: relative;
+            height: 15px;
+            margin-bottom: 30px;
+            border-radius: 20px;
+            background-color: rgb(95, 95, 95, 0.5);
+            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+
+            @include desktop {
+                width: 40vw;
+            }
+
+            span {
+                height: 100%;
+                width: 90%;
+                position: absolute;
+                border-radius: 20px;
+                transform: scaleX(0);
+                transform-origin: left;
+                background-color: #333333;
+            }
+        }
+
+    }
+
+    .html div {
+        span {
+            width: 90%;
+        }
+    }
+
+    .css div {
+        span {
+            width: 90%;
+        }
+    }
+
+    .js div {
+        span {
+            width: 70%;
+        }
+    }
+
+    .php div {
+        span {
+            width: 70%;
+        }
+    }
+
+    .mysql div {
+        span {
+            width: 60%;
+        }
+    }
+
+    .c div {
+        span {
+            width: 85%;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+@font-face {
+    font-family: "Moderat-Regular";
+    src: url(".")format("truetype");
+    src: url("./Police/Moderat-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Moderat-Bold";
+    src: url("./Police/Moderat-Bold.ttf")format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@mixin Moderat-Regular {
+    font-family: "Moderat-Regular";
+}
+
+@mixin Moderat-Bold {
+    font-family: "Moderat-Bold";
+}
